@@ -7,8 +7,11 @@ import class Foundation.InputStream
 import class Foundation.OutputStream
 import class Foundation.NSNumber
 import class Foundation.RunLoop
-#if os(Linux) && !compiler(>=5.0)
+#if os(Linux)
+import Glibc
+#if !compiler(>=5.0)
 import struct Foundation.RunLoopMode
+#endif
 #endif
 import struct Foundation.TimeInterval
 
